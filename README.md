@@ -5,8 +5,8 @@
   
 * properities of env file so code works and stripe service works in test mode:
   
-    DEBUG=False
+      DEBUG=False
   
-    STRIPE_TEST_PUBLIC_KEY= "pk_test_qblFNYngBkEdjEZ16jxxoWSM"
+      STRIPE_TEST_PUBLIC_KEY= "pk_test_qblFNYngBkEdjEZ16jxxoWSM"
   
-    STRIPE_TEST_SECRET_KEY= "sk_test_26PHem9AhJZvU623DfE1x4sd"
+      STRIPE_TEST_SECRET_KEY= "sk_test_26PHem9AhJZvU623DfE1x4sd"
