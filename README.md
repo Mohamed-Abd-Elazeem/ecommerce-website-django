@@ -4,6 +4,7 @@
 * there is requirements file have all librairies needed
   
 * properities of env file so code works and stripe service works in test mode:
+  
     DEBUG=False
   
     STRIPE_TEST_PUBLIC_KEY= "pk_test_qblFNYngBkEdjEZ16jxxoWSM"
