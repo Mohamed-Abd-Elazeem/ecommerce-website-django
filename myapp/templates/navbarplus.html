@@ -9,10 +9,7 @@
       aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
-
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -29,20 +26,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/filter/3">Shoes</a>
         </li>
-
       </ul>
       <!-- Links -->
-
-      <form class="d-flex" role="search" method="POST" action="{% url 'myapp:search' %}">
-        {% csrf_token %}
-        <input
-            type="search"
-            placeholder="Search for something"
-            name="search_query"
-            required aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    <!-- Collapsible content -->
-
   </nav>
   <!--/.Navbar-->
