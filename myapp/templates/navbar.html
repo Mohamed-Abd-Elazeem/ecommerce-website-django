@@ -41,6 +41,18 @@
           </li>
         </ul>
 
+        <!-- Search bar -->
+      <form class="d-flex" role="search" method="POST" action="{% url 'myapp:search' %}">
+        {% csrf_token %}
+        <input
+            type="search"
+            placeholder="What are you looking for ?"
+            name="search_query"
+            required aria-label="Search"  style="width: 1020px">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <!-- Search bar -->
+
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
           {% if request.user.is_authenticated %}
@@ -49,7 +61,6 @@
               <span class="clearfix d-none d-sm-inline-block"> wishlist </span>
             </a>
           </li>
-
           <li class="nav-item">
             <a href="{% url 'myapp:order-summary'%}" class="nav-link waves-effect">
               <span class="badge red z-depth-1 mr-1"> {{ request.user|cart_item_count }} </span>
@@ -65,12 +76,13 @@
           {% else %}
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'account_login' %}">
-              <span class="clearfix d-none d-sm-inline-block"> Login </span>
+              <span class="clearfix d-none d-sm-inline-block"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login </span>
             </a>
           </li>
+          &nbsp;&nbsp;
           <li class="nav-item">
             <a class="nav-link waves-effect" href="{% url 'account_signup' %}">
-              <span class="clearfix d-none d-sm-inline-block"> Signup </span>
+              <span class="clearfix d-none d-sm-inline-block"> Signup &nbsp;&nbsp; </span>
             </a>
           </li>
           {% endif %}
