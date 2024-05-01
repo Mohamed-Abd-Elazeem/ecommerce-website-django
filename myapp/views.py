@@ -12,6 +12,7 @@ import stripe , random , string
 from django.conf import settings
 from .forms import CheckoutForm, CouponForm, RefundForm, PaymentForm , ContactForm
 from .models import Item, OrderItem, Order, Address, Payment, Coupon, Refund, UserProfile , Contact , Wishlist
+from django.http import HttpResponseRedirect
 stripe.api_key = settings.SECRET_KEY  #test key for payment option stripe
 
 
@@ -608,8 +609,7 @@ def addremovewishlist(request,slug):
         )
         wishlist.save()
         messages.info(request, "This item was added to your wishlist.")
-    return redirect("/show_wishlist")
-
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 def showwishlist(request):
     wishlist = Wishlist.objects.filter(user=request.user)
