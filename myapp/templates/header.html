@@ -1,65 +1,31 @@
-{% load static %}
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>{% block head_title %}E-commerce Shop{% endblock %}</title>
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-<link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
-<link href="{% static 'css/style.min.css' %}" rel="stylesheet">
-
-<style type="text/css">
-  body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: hsl(23, 45%, 69%);
-    }
-  footer{
-    margin-top: auto;
-    text-align : center;
-    width:100%;
-background-color: rgb(126, 105, 64) !important;
-text-emphasis-color: #5522df !important;
-  }
-  .navbar .nav-link {
-    color: #fff !important;
-  }
-
-  .container2{    
-    text-align: center;
-    margin-top: 150px;
-
-  }
-
-  #bgintro {
-  background-image : url("../static/img/Website-Images-FASHION.webp"); 
-  height: 100vh;
-  margin: 0 auto;
-  text-align: center;
-  background-size: 100% 100%;
-  margin-top: -58.59px;
-}
-
-  #bg1 {
-    background-image : url("../static/img/ezgif-2-8d7656c884-1024x576.webp"); 
-    height: 100vh;
-    margin: 0 auto;
-    text-align: center;
-    background-size: 100% 100%;
-    margin-top: -10.0px;
-  }
-  
-  #bg2 {
-    background-image : url("../static/img/img(3).jpg"); 
-    height: 100vh;
-    margin: 0 auto;
-    text-align: center;
-    background-size: 100% 100%;
-    margin-top: -10.0px;
-    color:blue;
-  }
-  
-</style>
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-6 mt-3 mb-3">
+    <!-- Navbar brand -->
+    <span class="navbar-brand">Categories:</span>
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/allproducts">All
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/filter/1">Shirts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/filter/2">Jeans</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/filter/3">Shoes</a>
+        </li>
+      </ul>
+      <!-- Links -->
+  </nav>
+  <!--/.Navbar-->
